@@ -13,7 +13,7 @@ const signup = require('./routes/signup');
 
 const app = express();
 const db_url = process.env.DB_URL //|| "mongodb://localhost/urlshortener";
-const port = 5000 || process.env.PORT;
+const port = process.env.PORT || 5000;
 
 mongoose.connect(db_url, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use(cors());
